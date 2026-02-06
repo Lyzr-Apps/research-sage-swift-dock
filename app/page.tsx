@@ -319,7 +319,9 @@ export default function Home() {
     if (!documentInfo) return
 
     let content = `# ${documentInfo.title}\n\n`
-    content += `**Authors:** ${documentInfo.authors.join(', ')}\n\n`
+    if (documentInfo.authors && documentInfo.authors.length > 0) {
+      content += `**Authors:** ${documentInfo.authors.join(', ')}\n\n`
+    }
 
     if (understanding?.problem_statement) {
       content += `## Problem Statement\n${understanding.problem_statement}\n\n`
@@ -663,13 +665,15 @@ export default function Home() {
                   <Card className="shadow-xl border-indigo-100 overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
                     <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-6 text-white">
                       <h2 className="text-xl font-bold mb-3">{documentInfo.title}</h2>
-                      <div className="flex items-center gap-2 text-indigo-100 text-sm">
-                        <Users className="w-4 h-4" />
-                        <p>
-                          {documentInfo.authors.slice(0, 3).join(', ')}
-                          {documentInfo.authors.length > 3 && ` +${documentInfo.authors.length - 3} more`}
-                        </p>
-                      </div>
+                      {documentInfo.authors && documentInfo.authors.length > 0 && (
+                        <div className="flex items-center gap-2 text-indigo-100 text-sm">
+                          <Users className="w-4 h-4" />
+                          <p>
+                            {documentInfo.authors.slice(0, 3).join(', ')}
+                            {documentInfo.authors.length > 3 && ` +${documentInfo.authors.length - 3} more`}
+                          </p>
+                        </div>
+                      )}
                       {documentInfo.year && (
                         <p className="text-indigo-200 text-sm mt-1">{documentInfo.year}</p>
                       )}
@@ -884,9 +888,13 @@ export default function Home() {
                                 </h3>
                               </div>
                               <p className="text-xs text-gray-600 ml-9">
-                                {rec.authors.slice(0, 3).join(', ')}
-                                {rec.authors.length > 3 && ` +${rec.authors.length - 3} more`}
-                                {' · '}
+                                {rec.authors && rec.authors.length > 0 && (
+                                  <>
+                                    {rec.authors.slice(0, 3).join(', ')}
+                                    {rec.authors.length > 3 && ` +${rec.authors.length - 3} more`}
+                                    {' · '}
+                                  </>
+                                )}
                                 {rec.year}
                               </p>
                             </div>
