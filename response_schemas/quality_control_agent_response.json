@@ -1,0 +1,105 @@
+{
+  "agent_name": "Quality Control Agent",
+  "agent_id": "6985a8a5f7f7d3ffa5d866b1",
+  "agent_purpose": "quality_validation",
+  "description": "Validates output quality including summary coherence, factual grounding, recommendation relevance, and flags uncertainties",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "validation_status": "string",
+      "summary_validation": {
+        "coherence_score": "number",
+        "factual_grounding_verified": "boolean",
+        "hallucination_flags": [
+          "any"
+        ],
+        "redundancy_removed": [
+          "any"
+        ],
+        "issues_found": [
+          "any"
+        ]
+      },
+      "recommendations_validation": {
+        "relevance_verified": "boolean",
+        "all_recommendations_appropriate": "boolean",
+        "issues_found": [
+          "any"
+        ],
+        "recommendations_to_remove": [
+          "any"
+        ]
+      },
+      "uncertainty_flags": [
+        "any"
+      ],
+      "quality_score": "number",
+      "approved_for_delivery": "boolean",
+      "corrections_applied": [
+        "any"
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "validation_status": "passed_with_warnings",
+      "summary_validation": {
+        "coherence_score": 0.95,
+        "factual_grounding_verified": true,
+        "hallucination_flags": [],
+        "redundancy_removed": [],
+        "issues_found": []
+      },
+      "recommendations_validation": {
+        "relevance_verified": true,
+        "all_recommendations_appropriate": true,
+        "issues_found": [],
+        "recommendations_to_remove": []
+      },
+      "uncertainty_flags": [],
+      "quality_score": 0.92,
+      "approved_for_delivery": true,
+      "corrections_applied": []
+    },
+    "metadata": {
+      "agent_name": "Quality Control Agent",
+      "timestamp": "ISO timestamp"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-06T08:42:15.551701",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "validation_status": "passed_with_warnings",
+      "summary_validation": {
+        "coherence_score": 0.95,
+        "factual_grounding_verified": true,
+        "hallucination_flags": [],
+        "redundancy_removed": [],
+        "issues_found": []
+      },
+      "recommendations_validation": {
+        "relevance_verified": true,
+        "all_recommendations_appropriate": true,
+        "issues_found": [],
+        "recommendations_to_remove": []
+      },
+      "uncertainty_flags": [],
+      "quality_score": 0.92,
+      "approved_for_delivery": true,
+      "corrections_applied": []
+    },
+    "metadata": {
+      "agent_name": "Quality Control Agent",
+      "timestamp": "ISO timestamp"
+    }
+  },
+  "test_passed": true
+}

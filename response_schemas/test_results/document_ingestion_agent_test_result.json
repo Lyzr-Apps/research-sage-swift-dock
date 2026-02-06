@@ -1,0 +1,64 @@
+{
+  "agent_name": "Document Ingestion Agent",
+  "agent_id": "6985a82d3b50e9c8d7d7e977",
+  "test_message": "Parse this paper: 'Attention Is All You Need' by Vaswani et al. Extract title, authors, abstract, sections, and references.",
+  "expected_purpose": "assistant",
+  "timestamp": "2026-02-06T08:41:15.207903",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "title": "Attention Is All You Need",
+      "authors": [
+        "Ashish Vaswani",
+        "Noam Shazeer",
+        "Niki Parmar",
+        "Jakob Uszkoreit",
+        "Llion Jones",
+        "Aidan N. Gomez",
+        "Lukasz Kaiser",
+        "Illia Polosukhin"
+      ],
+      "abstract": "The paper presents a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on translation tasks show this model to be more parallelizable and to outperform established models.",
+      "sections": [
+        {
+          "section_name": "Introduction",
+          "content": "Neural networks for sequence transduction...",
+          "chunk_id": 1
+        },
+        {
+          "section_name": "Background",
+          "content": "To establish notation and assumptions...",
+          "chunk_id": 2
+        },
+        {
+          "section_name": "Model Architecture",
+          "content": "The Transformer model follows an encoder-decoder structure...",
+          "chunk_id": 3
+        },
+        {
+          "section_name": "Results",
+          "content": "In this section, we present experimental results...",
+          "chunk_id": 4
+        },
+        {
+          "section_name": "Conclusion",
+          "content": "We propose a new simple network architecture...",
+          "chunk_id": 5
+        }
+      ],
+      "references": [
+        "Vaswani, A., et al. (2017). Attention is all you need. In Advances in neural information processing systems (pp. 5998-6008).",
+        "Bahdanau, D., et al. (2014). Neural machine translation by jointly learning to align and translate. arXiv preprint arXiv:1409.0473."
+      ],
+      "validation_status": "valid",
+      "validation_errors": []
+    },
+    "metadata": {
+      "agent_name": "Document Ingestion Agent",
+      "timestamp": "2023-10-05T12:00:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"title\": \"Attention Is All You Need\",\n    \"authors\": [\"Ashish Vaswani\", \"Noam Shazeer\", \"Niki Parmar\", \"Jakob Uszkoreit\", \"Llion Jones\", \"Aidan N. Gomez\", \"Lukasz Kaiser\", \"Illia Polosukhin\"],\n    \"abstract\": \"The paper presents a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on translation tasks show this model to be more parallelizable and to outperform established models.\",\n    \"sections\": [\n      {\"section_name\": \"Introduction\", \"content\": \"Neural networks for sequence transduction...\", \"chunk_id\": 1},\n      {\"section_name\": \"Background\", \"content\": \"To establish notation and assumptions...\", \"chunk_id\": 2},\n      {\"section_name\": \"Model Architecture\", \"content\": \"The Transformer model follows an encoder-decoder structure...\", \"chunk_id\": 3},\n      {\"section_name\": \"Results\", \"content\": \"In this section, we present experimental results...\", \"chunk_id\": 4},\n      {\"section_name\": \"Conclusion\", \"content\": \"We propose a new simple network architecture...\", \"chunk_id\": 5}\n    ],\n    \"references\": [\n      \"Vaswani, A., et al. (2017). Attention is all you need. In Advances in neural information processing systems (pp. 5998-6008).\",\n      \"Bahdanau, D., et al. (2014). Neural machine translation by jointly learning to align and translate. arXiv preprint arXiv:1409.0473.\"\n    ],\n    \"validation_status\": \"valid\",\n    \"validation_errors\": []\n  },\n  \"metadata\": {\n    \"agent_name\": \"Document Ingestion Agent\",\n    \"timestamp\": \"2023-10-05T12:00:00Z\"\n  }\n}"
+}

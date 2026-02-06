@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "id": "input_node",
+      "type": "Input",
+      "label": "User Paper Upload",
+      "nodeCategory": "input"
+    },
+    {
+      "id": "discovery_coordinator",
+      "type": "Agent",
+      "label": "Discovery Coordinator Manager",
+      "nodeCategory": "agent",
+      "agent_id": "6985a8c9e2c0086a4fc43c18"
+    },
+    {
+      "id": "document_ingestion",
+      "type": "Agent",
+      "label": "Document Ingestion Agent",
+      "nodeCategory": "agent",
+      "agent_id": "6985a82d3b50e9c8d7d7e977"
+    },
+    {
+      "id": "understanding_agent",
+      "type": "Agent",
+      "label": "Understanding Agent",
+      "nodeCategory": "agent",
+      "agent_id": "6985a8478ce1fc653cfdeef9"
+    },
+    {
+      "id": "summarization_agent",
+      "type": "Agent",
+      "label": "Summarization Agent",
+      "nodeCategory": "agent",
+      "agent_id": "6985a863705117394b711983"
+    },
+    {
+      "id": "recommendation_agent",
+      "type": "Agent",
+      "label": "Recommendation Agent",
+      "nodeCategory": "agent",
+      "agent_id": "6985a87e7551cb7920ffe9e9"
+    },
+    {
+      "id": "quality_control",
+      "type": "Agent",
+      "label": "Quality Control Agent",
+      "nodeCategory": "agent",
+      "agent_id": "6985a8a5f7f7d3ffa5d866b1"
+    },
+    {
+      "id": "output_node",
+      "type": "Output",
+      "label": "Analysis Results",
+      "nodeCategory": "end"
+    }
+  ],
+  "edges": [
+    {
+      "source": "input_node",
+      "target": "discovery_coordinator"
+    },
+    {
+      "source": "discovery_coordinator",
+      "target": "document_ingestion"
+    },
+    {
+      "source": "document_ingestion",
+      "target": "understanding_agent"
+    },
+    {
+      "source": "understanding_agent",
+      "target": "summarization_agent"
+    },
+    {
+      "source": "understanding_agent",
+      "target": "recommendation_agent"
+    },
+    {
+      "source": "summarization_agent",
+      "target": "quality_control"
+    },
+    {
+      "source": "recommendation_agent",
+      "target": "quality_control"
+    },
+    {
+      "source": "quality_control",
+      "target": "output_node"
+    }
+  ]
+}

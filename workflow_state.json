@@ -1,0 +1,47 @@
+{
+  "workflow_created": true,
+  "creation_timestamp": "2026-02-06T00:00:00Z",
+  "agents": {
+    "manager": {
+      "agent_id": "6985a8c9e2c0086a4fc43c18",
+      "name": "Discovery Coordinator",
+      "type": "manager",
+      "description": "Manages conversational discovery flow, validates user inputs, orchestrates analysis pipeline, aggregates results, and handles progressive disclosure of outputs"
+    },
+    "sub_agents": [
+      {
+        "agent_id": "6985a82d3b50e9c8d7d7e977",
+        "name": "Document Ingestion Agent",
+        "type": "sub_agent",
+        "description": "Parses PDF/DOI/arXiv inputs, extracts structured content (title, authors, abstract, sections, references), performs strict validation, chunks long documents with context preservation"
+      },
+      {
+        "agent_id": "6985a8478ce1fc653cfdeef9",
+        "name": "Understanding Agent",
+        "type": "sub_agent",
+        "description": "Analyzes paper structure, identifies problem statement, methodology, results, limitations, extracts key claims with section citations for grounding"
+      },
+      {
+        "agent_id": "6985a863705117394b711983",
+        "name": "Summarization Agent",
+        "type": "sub_agent",
+        "description": "Generates prompt-driven structured summaries adapted to user's specified focus areas, tone, and depth requirements while avoiding hallucinations"
+      },
+      {
+        "agent_id": "6985a87e7551cb7920ffe9e9",
+        "name": "Recommendation Agent",
+        "type": "sub_agent",
+        "description": "Fetches related papers using hybrid similarity (semantic, citation, methodology, recency, impact, interdisciplinary), ranks and selects top 5 with relevance explanations"
+      },
+      {
+        "agent_id": "6985a8a5f7f7d3ffa5d866b1",
+        "name": "Quality Control Agent",
+        "type": "sub_agent",
+        "description": "Validates summary coherence, checks factual grounding against source sections, flags uncertainty, removes redundancy, ensures recommendations are genuinely relevant"
+      }
+    ]
+  },
+  "workflow_nodes": 8,
+  "workflow_edges": 8,
+  "total_agents_created": 6
+}

@@ -1,0 +1,35 @@
+{
+  "agent_name": "Discovery Coordinator",
+  "agent_id": "6985a8c9e2c0086a4fc43c18",
+  "test_message": "I've uploaded a paper about transformer models in NLP. I want to focus on the attention mechanism and practical applications.",
+  "expected_purpose": "manager",
+  "timestamp": "2026-02-06T08:41:04.935776",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "workflow_stage": "input_validation",
+      "conversation_state": {
+        "user_input_received": true,
+        "summarization_prompt_provided": true,
+        "ready_to_proceed": true
+      },
+      "aggregated_results": {
+        "document_info": {},
+        "paper_analysis": {},
+        "summary": {},
+        "recommendations": [],
+        "quality_validation": {}
+      },
+      "next_action": "trigger_ingestion",
+      "user_message": "Thank you for uploading your paper! I'll analyze the focus on the attention mechanism and practical applications. I'm proceeding with the document ingestion process now.",
+      "errors": []
+    },
+    "metadata": {
+      "agent_name": "Discovery Coordinator",
+      "timestamp": "2023-10-01T10:00:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"workflow_stage\": \"input_validation\",\n    \"conversation_state\": {\n      \"user_input_received\": true,\n      \"summarization_prompt_provided\": true,\n      \"ready_to_proceed\": true\n    },\n    \"aggregated_results\": {\n      \"document_info\": {},\n      \"paper_analysis\": {},\n      \"summary\": {},\n      \"recommendations\": [],\n      \"quality_validation\": {}\n    },\n    \"next_action\": \"trigger_ingestion\",\n    \"user_message\": \"Thank you for uploading your paper! I'll analyze the focus on the attention mechanism and practical applications. I'm proceeding with the document ingestion process now.\",\n    \"errors\": []\n  },\n  \"metadata\": {\n    \"agent_name\": \"Discovery Coordinator\",\n    \"timestamp\": \"2023-10-01T10:00:00Z\"\n  }\n}"
+}

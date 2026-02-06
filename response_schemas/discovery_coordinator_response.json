@@ -1,0 +1,89 @@
+{
+  "agent_name": "Discovery Coordinator",
+  "agent_id": "6985a8c9e2c0086a4fc43c18",
+  "agent_purpose": "workflow_orchestration",
+  "description": "Orchestrates complete paper analysis workflow, manages conversational flow, validates inputs, coordinates sub-agents, and aggregates results",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "workflow_stage": "string",
+      "conversation_state": {
+        "user_input_received": "boolean",
+        "summarization_prompt_provided": "boolean",
+        "ready_to_proceed": "boolean"
+      },
+      "aggregated_results": {
+        "document_info": {},
+        "paper_analysis": {},
+        "summary": {},
+        "recommendations": [
+          "any"
+        ],
+        "quality_validation": {}
+      },
+      "next_action": "string",
+      "user_message": "string",
+      "errors": [
+        "any"
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "workflow_stage": "input_validation",
+      "conversation_state": {
+        "user_input_received": true,
+        "summarization_prompt_provided": true,
+        "ready_to_proceed": true
+      },
+      "aggregated_results": {
+        "document_info": {},
+        "paper_analysis": {},
+        "summary": {},
+        "recommendations": [],
+        "quality_validation": {}
+      },
+      "next_action": "trigger_ingestion",
+      "user_message": "Thank you for uploading your paper! I'll analyze the focus on the attention mechanism and practical applications. I'm proceeding with the document ingestion process now.",
+      "errors": []
+    },
+    "metadata": {
+      "agent_name": "Discovery Coordinator",
+      "timestamp": "2023-10-01T10:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-06T08:41:04.936273",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "workflow_stage": "input_validation",
+      "conversation_state": {
+        "user_input_received": true,
+        "summarization_prompt_provided": true,
+        "ready_to_proceed": true
+      },
+      "aggregated_results": {
+        "document_info": {},
+        "paper_analysis": {},
+        "summary": {},
+        "recommendations": [],
+        "quality_validation": {}
+      },
+      "next_action": "trigger_ingestion",
+      "user_message": "Thank you for uploading your paper! I'll analyze the focus on the attention mechanism and practical applications. I'm proceeding with the document ingestion process now.",
+      "errors": []
+    },
+    "metadata": {
+      "agent_name": "Discovery Coordinator",
+      "timestamp": "2023-10-01T10:00:00Z"
+    }
+  },
+  "test_passed": true
+}
